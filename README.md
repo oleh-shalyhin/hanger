@@ -1,5 +1,22 @@
 # QuitePlace
 
+### Description
+QuitePlace is a simple social network.
+
+###Features
+* authoriazation and registration
+* profile page (with photo, name and some information about the owner of the profile)
+* friends and friends list
+* photos and photo albums
+* chat
+
+### Technologies stack
+* language - ES6
+* server - NodeJS
+* server framework - Express
+* database - MongoDB
+* view template engine - Handlebars
+
 ### Plan of development
 
 1. Setup project, create boilerplate (done)
