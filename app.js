@@ -1,14 +1,16 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 var favicon = require('serve-favicon');
+var serveStatic = require('serve-static');
 var MongoClient = require('mongodb').MongoClient;
 var path = require('path');
 
 var app = express();
 
 app.use(favicon(path.join(__dirname, '/public/images/favicon.ico')));
-app.engine('handlebars', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
-app.set('view engine', 'handlebars');
+app.use(serveStatic(path.join(__dirname, 'public')))
+app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
+app.set('view engine', '.hbs');
 
 MongoClient.connect('mongodb://localhost:27017/quiteplace', function(err, db) {
 	if(err) {
@@ -16,7 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/quiteplace', function(err, db) {
 	}
 
 	app.get('/', function (req, res) {
-	  res.send('Home page');
+	  res.render('home');
 	});
 
 	app.post('/signup', function(req, res) {
