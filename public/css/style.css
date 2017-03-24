@@ -1,6 +1,30 @@
+#navbar {
+	background-color: #14213D;
+}
+
 #banner {
     background-image: url(/images/banner-site.jpg);
-    background-size: cover;
+    background-size: auto auto;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+#signupForm {
+	background-color: rgba(20,33,61,0.4);
+	padding: 15px;
+}
+
+#banner label.control-label {
+	font-size: 20px;
+	color: #FCA311;
+
+}
+
+#banner label.radio-inline, #banner h2 {
+	color: #E5E5E5;
+
+}
+
+#login-menu {
+	color: #FFFFFF;
 }
