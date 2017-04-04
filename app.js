@@ -8,7 +8,7 @@ var path = require('path');
 var app = express();
 
 app.use(favicon(path.join(__dirname, '/public/images/favicon.ico')));
-app.use(serveStatic(path.join(__dirname, 'public')))
+app.use(serveStatic(path.join(__dirname, 'public')));
 app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
